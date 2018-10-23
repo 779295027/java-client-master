@@ -561,7 +561,7 @@ public class HubProxy {
             public void run(E1 p1, E2 p2, E3 p3, E4 p4, E5 p5) {
                 handler.run(p1, p2, p3, p4, p5);
             }
-        }, new TypeToken[]{parameter1, parameter2, parameter3, parameter4, parameter5});
+        }, parameter1, parameter2, parameter3, parameter4, parameter5);
     }
 
     public <E1, E2, E3, E4> void on(String eventName, final SubscriptionHandler4<E1, E2, E3, E4> handler, TypeToken<E1> parameter1, TypeToken<E2> parameter2, TypeToken<E3> parameter3, TypeToken<E4> parameter4) {
@@ -569,7 +569,7 @@ public class HubProxy {
             public void run(E1 p1, E2 p2, E3 p3, E4 p4, Void p5) {
                 handler.run(p1, p2, p3, p4);
             }
-        }, new TypeToken[]{parameter1, parameter2, parameter3, parameter4});
+        },parameter1, parameter2, parameter3, parameter4);
     }
 
 
@@ -578,7 +578,7 @@ public class HubProxy {
             public void run(E1 p1, E2 p2, E3 p3, Void p4, Void p5) {
                 handler.run(p1, p2, p3);
             }
-        }, new TypeToken[]{parameter1, parameter2, parameter3});
+        }, parameter1, parameter2, parameter3);
     }
 
 
@@ -587,7 +587,7 @@ public class HubProxy {
             public void run(E1 p1, E2 p2, Void p3, Void p4, Void p5) {
                 handler.run(p1, p2);
             }
-        }, new TypeToken[]{parameter1, parameter2});
+        }, parameter1, parameter2);
     }
 
 
